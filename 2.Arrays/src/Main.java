@@ -47,5 +47,15 @@ public class Main {
 
         boolean [][] onLine = {{true},{false}};
         System.out.println(Arrays.deepToString(onLine));
+
+        // 3d Array
+
+        int [][][] numberCube = new int[2][2][2];
+
+        numberCube [0][0][0] = 1;
+        System.out.println(Arrays.deepToString(numberCube));
+
+        
+
     }
 }
