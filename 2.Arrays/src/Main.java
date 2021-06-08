@@ -42,5 +42,10 @@ public class Main {
         String [][] namesList2 = {{"firstName","lastName"},{"Bekalu", "Tadesse"}};
 
         System.out.println(Arrays.deepToString(namesList2));
+
+        // MD Status
+
+        boolean [][] onLine = {{true},{false}};
+        System.out.println(Arrays.deepToString(onLine));
     }
 }
