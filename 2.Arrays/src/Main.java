@@ -50,12 +50,12 @@ public class Main {
 
         // 3d Array
 
-        int [][][] numberCube = new int[2][2][2];
+        int [][][] numberCube_ = new int[2][2][2];
 
-        numberCube [0][0][0] = 1;
-        System.out.println(Arrays.deepToString(numberCube));
+        numberCube_ [0][0][0] = 1;
+        System.out.println(Arrays.deepToString(numberCube_));
 
-        
+
 
     }
 }
