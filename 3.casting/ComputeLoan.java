@@ -1,3 +1,4 @@
+import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class ComputeLoan {
@@ -14,7 +15,14 @@ public class ComputeLoan {
         System.out.print("enter number of years: ");
         int numberOfYears =input.nextInt();
 
+
+        NumberFormat currencyValue = NumberFormat.getCurrencyInstance();
+
         double monthlyPayemnet = (loanAmount * monthlyInterest) / (1 - (1 / Math.pow((1 + monthlyInterest), (numberOfYears*12))));
-        System.out.println("Monthly payment: "+monthlyPayemnet);
+
+        String result = currencyValue.format(monthlyPayemnet);
+        System.out.println(result);
+
+        System.out.println("Monthly payment amount is: "+result);
     }
 }
