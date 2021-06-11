@@ -9,16 +9,17 @@ public class ComputeLoan {
         double annualInterest = input.nextDouble();
         double monthlyInterest = annualInterest /12;
 
-        System.out.print("enter loan amount: ");
-        double loanAmount =input.nextDouble();
-
         System.out.print("enter number of years: ");
         int numberOfYears =input.nextInt();
 
+        System.out.print("enter loan amount: ");
+        double loanAmount =input.nextDouble();
+        
 
         NumberFormat currencyValue = NumberFormat.getCurrencyInstance();
 
-        double monthlyPayemnet = (loanAmount * monthlyInterest) / (1 - (1 / Math.pow((1 + monthlyInterest), (numberOfYears*12))));
+        double monthlyPayemnet = (loanAmount * monthlyInterest) / (1 - 1 / Math.pow(1+monthlyInterest, numberOfYears*12));
+
 
         String result = currencyValue.format(monthlyPayemnet);
         System.out.println(result);
