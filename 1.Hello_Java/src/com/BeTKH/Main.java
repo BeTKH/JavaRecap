@@ -3,6 +3,7 @@ package com.BeTKH;
 public class Main {
 
     public static void main(String[] args) {
-	System.out.println("Hello Java!");
+	// write your code here
+        System.out.println("Hello");
     }
 }
