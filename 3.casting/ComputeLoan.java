@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class ComputeLoan {
     public static void main(String[] args) {
+
+        // Scanner object
         Scanner input = new Scanner(System.in);
 
         System.out.print("enter annaul interest rate: ");
@@ -15,14 +17,13 @@ public class ComputeLoan {
         System.out.print("enter loan amount: ");
         double loanAmount =input.nextDouble();
 
+        double cpdIntr = Math.pow(1+monthlyInterest, numberOfYears *12);
+
+        double monthlyPayemnet = loanAmount * monthlyInterest * cpdIntr / (cpdIntr -1);
 
         NumberFormat currencyValue = NumberFormat.getCurrencyInstance();
 
-        double monthlyPayemnet = (loanAmount * monthlyInterest) / (1 - 1 / Math.pow(1+monthlyInterest, numberOfYears*12));
-
-
-        String result = currencyValue.format(monthlyPayemnet);
-        System.out.println(result);
+        String result = currencyValue.format(monthlyPayemnet/12);
 
         System.out.println("Monthly payment amount is: "+result);
     }
