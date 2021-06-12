@@ -14,7 +14,7 @@ public class ComputeLoan {
 
         System.out.print("enter loan amount: ");
         double loanAmount =input.nextDouble();
-        
+
 
         NumberFormat currencyValue = NumberFormat.getCurrencyInstance();
 
