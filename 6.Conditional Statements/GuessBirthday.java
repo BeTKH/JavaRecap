@@ -36,12 +36,13 @@ public class GuessBirthday {
 
         System.out.println("\n\nOn which month were you born?\n");
         System.out.print("The month is: ");
+
         String birthMonth = input.next();
 
         // check set-1
-        System.out.println("Is your BirthDay in Set-1 ?");
+        System.out.println("\nIs your BirthDay in this Set? \n");
         System.out.println(set1);
-        System.out.print("Enter 0 for No and 1 for Yes: \n");
+        System.out.print("\nEnter 0 for No and 1 for Yes: \n");
         int answer = input.nextInt();
 
         if (answer ==1){
@@ -49,9 +50,9 @@ public class GuessBirthday {
         }
 
         // check set-2
-        System.out.println("Is your BirthDay in Set-2 ?");
+        System.out.println("Is your BirthDay in this Set? \n");
         System.out.println(set2);
-        System.out.print("Enter 0 for No and 1 for Yes: \n");
+        System.out.print("\nEnter 0 for No and 1 for Yes: \n");
         answer = input.nextInt();
 
         if (answer ==1){
@@ -60,9 +61,9 @@ public class GuessBirthday {
 
 
         // check set-3
-        System.out.println("Is your BirthDay in Set-3 ?");
+        System.out.println("Is your BirthDay in this Set ? \n");
         System.out.println(set3);
-        System.out.print("Enter 0 for No and 1 for Yes: \n");
+        System.out.print("\nEnter 0 for No and 1 for Yes: \n");
         answer = input.nextInt();
 
         if (answer ==1){
@@ -70,9 +71,9 @@ public class GuessBirthday {
         }
 
         // check set-4
-        System.out.println("Is your BirthDay in Set-4 ?");
+        System.out.println("Is your BirthDay in this Set ? \n");
         System.out.println(set4);
-        System.out.print("Enter 0 for No and 1 for Yes: \n");
+        System.out.print("\nEnter 0 for No and 1 for Yes: \n");
         answer = input.nextInt();
 
         if (answer ==1){
@@ -80,9 +81,9 @@ public class GuessBirthday {
         }
 
         // check set-5
-        System.out.println("Is your BirthDay in Set-5 ?");
+        System.out.println("Is your BirthDay in this Set ? \n");
         System.out.println(set5);
-        System.out.print("Enter 0 for No and 1 for Yes: \n");
+        System.out.print("\nEnter 0 for No and 1 for Yes: \n");
         answer = input.nextInt();
 
         if (answer ==1){
