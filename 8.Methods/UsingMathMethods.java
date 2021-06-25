@@ -11,9 +11,10 @@ public class UsingMathMethods {
         System.out.print("Enter sine angle to be converted into radians: ");
         double sineAngle = input.nextDouble();
 
-        radiansAngel = Math.toRadians(sineAngle);
+        // invoke a toRadians method from the Math class
+        double radianAngle = Math.toRadians(sineAngle);
 
-        System.out.println("The angle in radians is :"+radiansAngel);
+        System.out.println("The angle in radians is : "+radianAngle);
 
     }
 
