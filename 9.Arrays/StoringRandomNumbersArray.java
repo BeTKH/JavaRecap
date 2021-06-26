@@ -17,6 +17,7 @@ public class StoringRandomNumbersArray {
 
         // create an array that can store random number generated as per user request
         int[] numbers = new int[numberOfRandomNumbers];
+        System.out.println("\nThe empty array: "+Arrays.toString(numbers));
 
 
         for ( int i = 0; i < numberOfRandomNumbers ; i++){
@@ -30,8 +31,9 @@ public class StoringRandomNumbersArray {
         }
 
         System.out.println("\nThe random numbers generated are: "+Arrays.toString(numbers));
+        System.out.println("\nThe length of the Array is : "+numbers.length);
 
-        double averageOfRandomNumbers = sumOfRandomNumbers / numberOfRandomNumbers;
+        double averageOfRandomNumbers = sumOfRandomNumbers / numbers.length;
         System.out.println("\n\nAverage of Random Numbers is : "+averageOfRandomNumbers);
 
 
