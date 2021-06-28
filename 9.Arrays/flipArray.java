@@ -13,6 +13,7 @@ public class flipArray {
 
     }
 
+    // this method returns an arry
     public static int[] arrayFlipper(int[] array_Input){
         int[] flippedArray_output = new int[array_Input.length];
 
