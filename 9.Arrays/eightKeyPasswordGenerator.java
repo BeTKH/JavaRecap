@@ -7,9 +7,15 @@ public class eightKeyPasswordGenerator {
         char[] charArray = new char[12];
         System.out.println("empty array: "+ Arrays.toString(charArray));
 
-        // generate 12 random characters and store in the above array
-        for (int i = 0 ; i < 12 ; i++){
-            charArray[i] = generateRandomChar('!','z');
+
+        // generate 5 random speacial characters and store in the above array
+        for (int i = 0 ; i < 5 ; i++){
+            charArray[i] = generateRandomChar('%','/');
+        }
+
+        // generate 7 random numbers and store in the above array
+        for (int i = 5 ; i < 12 ; i++){
+            charArray[i] = generateRandomChar('0','9');
         }
 
         System.out.println("an array that contains 12 random characters: "+Arrays.toString(charArray));
@@ -17,7 +23,11 @@ public class eightKeyPasswordGenerator {
 
         //Create a password by concatenating the characters
         String newPassword  = "";
-        for ( int k = 0 ; k < charArray.length ; k++){
+        for ( int k = 0 ; k < charArray.length-8 ; k++){
+            newPassword = newPassword+charArray[k];
+        }
+
+        for ( int k = 5 ; k < 12 ; k++){
             newPassword = newPassword+charArray[k];
         }
         System.out.println("\nYour generated password is : "+newPassword);
