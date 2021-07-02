@@ -21,6 +21,7 @@ public class InsertionSort {
                 list[k+1] = list[k];
             }
 
+            // Insert the current element
             list[k+1] = currentValue;
 
         System.out.println("The sorted array is : "+Arrays.toString(list));
