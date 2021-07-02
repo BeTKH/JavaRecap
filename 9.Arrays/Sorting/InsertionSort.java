@@ -6,23 +6,29 @@ public class InsertionSort {
     public static void main(String[] args) {
 
         int[] target_arry = {2,9,5,4,8,1,6};
-        System.out.println("The array before sorting is : "+Arrays.toString(target_arry));
+        System.out.println("\nThe array before sorting is : "+Arrays.toString(target_arry)+"\n");
+
+        InsertionSort(target_arry);
     }
 
     // Insertion sort method
 
-    public static void InsertionSort(int[] list){
-        for (int i = 1 ; i < list.length ; i++)
+    public static void InsertionSort(int[] list) {
 
-            double currentValue = list[i];
+        for (int i = 1; i < list.length; i++) {
 
-            for (int k = i - 1 ; k >= 0 && list[k] > currentValue ; k--){
+            int currentValue = list[i];
+            int k ;
+            for (k = i - 1; k >= 0 && list[k] > currentValue; k--) {
 
-                list[k+1] = list[k];
+                list[k + 1] = list[k];
             }
 
-            list[k+1] = currentValue;
+            // Insert the current element
+            list[k + 1] = currentValue;
 
-        System.out.println("The sorted array is : "+Arrays.toString(list));
+            System.out.println("Sorting ... " + Arrays.toString(list));
+        }
+        System.out.println("\nSorted array is : " + Arrays.toString(list));
     }
 }
