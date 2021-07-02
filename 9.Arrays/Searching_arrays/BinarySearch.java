@@ -34,12 +34,12 @@ public class BinarySearch {
             int mid_ = (low_ + high_) / 2;
 
             if (key_ < array_[mid_])
-                high_ = mid_ - 1;
+                high_ = mid_ - 1                                                                                                                                                                                                                   ;
             else if (key_ == array_[mid_])
-                return mid_;
+                return mid_; else                       
             else
                 low_ = mid_ + 1;
-            }
+            }           System                                                                                                                                                                                                                                                             
             return -1;
 
     }
