@@ -6,7 +6,7 @@ public class sumingByCol {
 
         System.out.println("The matrix is : "+ Arrays.deepToString(matrix));
 
-        for ( int col = 0 ; col < matrix[0].length ; col++){
+        for ( int col = 0 ; col < matrix[1].length ; col++){
 
             int total = 0;
 
