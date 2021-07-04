@@ -15,6 +15,6 @@ public class addingTheFirstElements {
             }
         }
 
-        System.out.println("The sum is : "+sum);
+        System.out.println("\nThe sum of the first elements of the array "+Arrays.deepToString(matrix) +"  is : "+sum);
     }
 }
