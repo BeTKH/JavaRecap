@@ -27,7 +27,6 @@ public class BinarySearch {
         int low_ = 0;
         int high_ = array_.length-1;
 
-
         while (high_ >= low_){
             
             //Calculate the new middle point
@@ -36,12 +35,11 @@ public class BinarySearch {
             if (key_ < array_[mid_])
                 high_ = mid_ - 1                                                                                                                                                                                                                   ;
             else if (key_ == array_[mid_])
-                return mid_; else                       
+                return mid_;
             else
                 low_ = mid_ + 1;
-            }           System                                                                                                                                                                                                                                                             
-            return -1;
+            }
 
+        return -1;
     }
-
 }
