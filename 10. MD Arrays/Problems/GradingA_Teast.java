@@ -26,6 +26,10 @@ public class GradingA_Teast {
 
         System.out.println("The score matrix of the evaluation is : "+Arrays.deepToString(scoreMatrix));
 
+        int[] sum_result = ScoreResult(scoreMatrix);
+
+        System.out.println("The result of the quizz for each student is : "+Arrays.toString(sum_result));
+
     }
 
     // method that evaluates each students answer and returns a 2D array that contains the result of the evaluation
@@ -41,6 +45,8 @@ public class GradingA_Teast {
 
                 if(listOfAnswers[rows][cols] == keys_[cols])
                     gradeMatrixOfAStudent[cols] = 1;
+                else if(listOfAnswers[rows][cols] != keys_[cols])
+                    gradeMatrixOfAStudent[cols] = 0;
             }
             //System.out.println(Arrays.toString(gradeMatrixOfAStudent));
             ScoreMatrixOfAllStudents[rows] = gradeMatrixOfAStudent;
@@ -50,5 +56,24 @@ public class GradingA_Teast {
         }
 
         return ScoreMatrixOfAllStudents;
+    }
+
+
+    // method that returns actual grade
+
+    public static int[] ScoreResult(int [][] _2Darray){
+
+        int [] sum = new int[_2Darray.length];
+        for (int i = 0 ; i < _2Darray.length ; i++){
+
+            int temp_sum = 0;
+            for (int k = 0 ; k < _2Darray[i].length; k++){
+                temp_sum += _2Darray[i][k];
+            }
+
+            sum[i] = temp_sum;
+        }
+
+        return sum;
     }
 }
