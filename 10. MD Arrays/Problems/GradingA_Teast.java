@@ -15,7 +15,9 @@ public class GradingA_Teast {
                 {'A', 'B', 'D', 'C', 'C', 'D', 'E', 'E', 'A', 'D'},
                 {'B', 'B', 'E', 'C', 'C', 'D', 'E', 'E', 'A', 'D'},
                 {'B', 'B', 'A', 'C', 'C', 'D', 'E', 'E', 'A', 'D'},
-                {'E', 'B', 'E', 'C', 'C', 'D', 'E', 'E', 'A', 'D'} };
+                {'E', 'B', 'E', 'C', 'C', 'D', 'E', 'E', 'A', 'D'},
+                {'D', 'B','D', 'C', 'C', 'D', 'A', 'E', 'A', 'D'},
+                {'D', 'B','D', 'C', 'C', 'D', 'A', 'E', 'A', 'A'}};
 
         System.out.println("The answers from 8 students for 10 questions is "+ Arrays.deepToString(answers));
 
@@ -24,21 +26,23 @@ public class GradingA_Teast {
 
         int [][] scoreMatrix = ScoreMatrix(answers, correctAnswers);
 
-        System.out.println("The score matrix of the evaluation is : "+Arrays.deepToString(scoreMatrix));
+        System.out.println("\nThe score matrix of the evaluation is : "+Arrays.deepToString(scoreMatrix));
 
         int[] sum_result = ScoreResult(scoreMatrix);
 
-        System.out.println("The result of the quizz for each student is : "+Arrays.toString(sum_result));
+        System.out.println("\nThe result of the quizz for each student is : "+Arrays.toString(sum_result));
 
     }
 
     // method that evaluates each students answer and returns a 2D array that contains the result of the evaluation
     public static int[][] ScoreMatrix(char [][] listOfAnswers, char [] keys_){
 
-        int[][] ScoreMatrixOfAllStudents = new int[8][10];
-        int[] gradeMatrixOfAStudent = new int[10];
+        int[][] ScoreMatrixOfAllStudents = new int[10][10];
+
 
         for( int rows = 0; rows <listOfAnswers.length; rows++){
+
+            int[] gradeMatrixOfAStudent = new int[10];
             for (int cols = 0 ; cols <listOfAnswers[rows].length ; cols++){
 
                 //System.out.println(listOfAnswers[rows][cols]);
