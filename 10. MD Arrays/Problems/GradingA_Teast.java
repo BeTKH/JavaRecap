@@ -43,6 +43,7 @@ public class GradingA_Teast {
         for( int rows = 0; rows <listOfAnswers.length; rows++){
 
             int[] gradeMatrixOfAStudent = new int[10];
+            
             for (int cols = 0 ; cols <listOfAnswers[rows].length ; cols++){
 
                 //System.out.println(listOfAnswers[rows][cols]);
