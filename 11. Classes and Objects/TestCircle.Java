@@ -18,6 +18,7 @@ public class TestCircle {
 
 // define a Circle class with TWO Constructors
 class Circle{
+
     double radius;
 
     // Constructor - constructs a circle with a radius of 1
@@ -27,7 +28,10 @@ class Circle{
         radius = 1.0;
     }
 
-    /** Construct a circle with a specified radius */
+    /** - Construct a circle with a specified radius
+        - This constructor is used to initialize the Radius of the Circle => set a value for the radius declared above
+     **/
+
     Circle( double newRadius){
         radius = newRadius;
     }
