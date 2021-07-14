@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class PrimeCountII {
 
@@ -17,12 +18,14 @@ public class PrimeCountII {
 
         //Call a method to create a list of numbers to be checked
         int[] list = createListOfNumbers(startNumber, endNumber);
-        System.out.println("The list of numbers to bec checked are : "+ Arrays.toString(list));
+        System.out.println("The list of numbers to be checked are : "+ Arrays.toString(list));
 
         // Call to prime counter method
         int primeCounts = primeCounter(startNumber, endNumber);
 
         System.out.println("The prime count is : "+primeCounts);
+
+        listOfPrimes(list);
 
     }
 
@@ -50,15 +53,16 @@ public class PrimeCountII {
         int primeCount = 0;
 
         for ( int number = startNumber ; number <= endNumber ; number++){
-            System.out.println(number);
+            //System.out.println(number);
             if (isPrime(number)){
-                System.out.println("is prime : "+number);
+                //System.out.println("is prime : "+number);
                 primeCount++; }
             }
 
         return primeCount;
     }
 
+    // method that checks if a number is prime or not
     public static boolean isPrime( int Num){
 
         // Corner case
@@ -72,4 +76,24 @@ public class PrimeCountII {
         // otherwise
         return true;
     }
+
+    // method that returns list of prime numbers from the list of numbers to be checked
+    public static void listOfPrimes( int[] allList){
+
+        //create an arrayList -- array of variable length
+        ArrayList<Integer> listofprimes = new ArrayList<>();
+
+        for (int i = 0 ; i < allList.length ; i++){
+            if (isPrime(allList[i])){
+                    listofprimes.add(allList[i]);
+            }
+        }
+
+        System.out.println("The list of prime numbers are : "+listofprimes.toString());
+    }
+
+
+
+
+
 }
