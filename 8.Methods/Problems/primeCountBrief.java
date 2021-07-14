@@ -31,4 +31,9 @@ public class primeCountBrief{
 
 		return primeCount;
 	}
+
+
+
+
+
 }
