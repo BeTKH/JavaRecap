@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class InertialArray {
@@ -13,7 +14,8 @@ public class InertialArray {
 
         System.out.println("Does the array "+Arrays.toString(list) + " has odd in it ?  The answer is : "+hasOddResult);
         System.out.println(" Is the maximum value even too? "+Arrays.toString(list) + "The answer is : "+maxIsEven(list));
-        System.out.println("Is every odd is grater in "+Arrays.toString(list)+ "? The answer is : "+everyOddIsGrater(list));
+
+        everyOddIsGrater(list);
 
 
 
@@ -73,32 +75,23 @@ public class InertialArray {
     }
 
     // a method that checks if every odd is grater except the max
-    public static boolean everyOddIsGrater( int[]  array_){
+    public static void everyOddIsGrater( int[]  array_) {
 
-        int max = 0;
-        boolean flag = false;
+        ArrayList<Integer> listofOdds = new ArrayList<>();
+        ArrayList<Integer> listofEevens = new ArrayList<>();
 
-        for (int i = 0 ; i < array_.length ; i++){
+        for (int i = 0; i < array_.length; i++) {
 
-            if (array_[i] > max){
-                max = array_[i];
+            if (array_[i] % 2 == 0) {
+                listofEevens.add(array_[i]);
+            } else {
+                listofOdds.add(array_[i]);
             }
 
         }
 
-        for (int k = 0 ; k < array_.length ; k++){
-            while ( array_[k] < max){
-                if (array_[k] % 2 != 0 ){
-                    flag = true;
-                } else {
-                    flag = false;
-
-                }
-            }
-
-        }
-
-        return flag;
+        System.out.println("The odds are " + listofOdds.toString());
+        System.out.println("The evens are " + listofEevens.toString());
 
     }
 
