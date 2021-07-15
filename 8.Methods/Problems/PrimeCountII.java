@@ -92,8 +92,4 @@ public class PrimeCountII {
         System.out.println("The list of prime numbers are : "+listofprimes.toString());
     }
 
-
-
-
-
 }
