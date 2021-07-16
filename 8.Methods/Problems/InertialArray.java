@@ -6,12 +6,6 @@ public class InertialArray {
     // main
     public static void main(String[] args) {
 
-        // create a new array
-        int[] list = {11, 4, 20, 9, 2, 8};
-
-        boolean hasOddResult = hasOdd(list);
-
-        System.out.println("The result is : "+isInertial(list)+ " for the array "+Arrays.toString(list) );
 
         System.out.println("The result is : "+isInertial(new int[] {1})+" for the array "+Arrays.toString(new int[] {1}));
 
@@ -110,15 +104,21 @@ public class InertialArray {
 
         for(int oddIndex = 0; oddIndex < oddValuesIndex; oddIndex++){
             for(int evenIndex = 0; evenIndex < evenValuesIndex; evenIndex++){
-                if(evenValues[evenIndex] != maxVlaue(array_)){
-                    if(oddValues[oddIndex] > evenValues[evenIndex]){
+
+                if(evenValues[evenIndex] != maxVlaue(array_)){ // when there ARE other even numbers less than maximum even
+
+                    if(oddValues[oddIndex] > evenValues[evenIndex]){ // each odd number must be grater than the even numbers expt max even
                         oddsAreGreater = true;
                     }
+                }else{  // when there is no even number other than the maximum
+                    oddsAreGreater = true;
+                    break;
                 }
 
             }
 
         }
+        
         return oddsAreGreater;
 
     }
