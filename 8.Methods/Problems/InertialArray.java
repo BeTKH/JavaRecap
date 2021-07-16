@@ -8,30 +8,41 @@ public class InertialArray {
 
         // create a new array
         int[] list = {11, 4, 20, 9, 2, 8};
-        System.out.println("The array is : "+ Arrays.toString(list));
 
         boolean hasOddResult = hasOdd(list);
 
-        System.out.println("Does the array "+Arrays.toString(list) + " has odd in it ?  The answer is : "+hasOddResult);
-        System.out.println(" Is the maximum value even too? "+Arrays.toString(list) + "The answer is : "+maxIsEven(list));
+        System.out.println("The result is : "+isInertial(list)+ " for the array "+Arrays.toString(list) );
 
-        everyOddIsGrater(list);
+        System.out.println("The result is : "+isInertial(new int[] {1})+" for the array "+Arrays.toString(new int[] {1}));
 
+        System.out.println("The result is : "+isInertial(new int[] {2})+" for the array "+Arrays.toString(new int[] {2}));
 
+        System.out.println("The result is : "+isInertial(new int[] {1, 2, 3, 4})+" for the array "+Arrays.toString(new int[] {1, 2, 3, 4}));
+
+        System.out.println("The result is : "+isInertial(new int[] {1, 1, 1, 1, 1, 1, 2})+" for the array "+Arrays.toString(new int[] {1, 1, 1, 1, 1, 1, 2}));
+
+        System.out.println("The result is : "+isInertial(new int[] {2, 12, 4, 6, 8, 11})+" for the array "+Arrays.toString(new int[] {2, 12, 4, 6, 8, 11}));
+
+        System.out.println("The result is : "+isInertial(new int[] {2, 12, 12, 4, 6, 8, 11})+" for the array "+Arrays.toString(new int[] {2, 12, 12, 4, 6, 8, 11}));
+
+        System.out.println("The result is : "+isInertial(new int[] {-2, -4, -6, -8, -11})+" for the array "+Arrays.toString(new int[] {-2, -4, -6, -8, -11}));
+
+        System.out.println("The result is : "+isInertial(new int[] {2, 3, 5, 7})+" for the array "+Arrays.toString(new int[] {2, 3, 5, 7}));
+
+        System.out.println("The result is : "+isInertial(new int[] {2, 4, 6, 8, 10})+" for the array "+Arrays.toString(new int[] {2, 4, 6, 8, 10}));
 
     }
 
 
-    public static void isInertial( int[] array_){
+    public static int isInertial( int[] array_){
+        int isInertialArray = 0;
+        if ( hasOdd( array_) && maxIsEven(array_) && everyOddIsGrater(array_)){
+            isInertialArray = 1;
+        }else{
+            isInertialArray = 0;
+        }
 
-        // has at least one odd value
-        //hasOdd( int[] array_);
-
-        // max value is even
-        //maxIsEven( int[] array);
-
-        // every odd > every even except the maximum value
-        //evryOddIsGrater( int array_);
+        return isInertialArray;
     }
 
 
@@ -75,7 +86,7 @@ public class InertialArray {
     }
 
     // a method that checks if every odd is grater except the max
-    public static void everyOddIsGrater( int[]  array_) {
+    public static boolean everyOddIsGrater( int[]  array_) {
 
         boolean oddsAreGreater = false;
 
@@ -108,9 +119,7 @@ public class InertialArray {
             }
 
         }
-
-        System.out.println("For the array "+Arrays.toString(array_) + "is every odd grater than the evens except the max ? "+oddsAreGreater);
-
+        return oddsAreGreater;
 
     }
 
