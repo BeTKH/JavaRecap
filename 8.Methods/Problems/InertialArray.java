@@ -77,21 +77,75 @@ public class InertialArray {
     // a method that checks if every odd is grater except the max
     public static void everyOddIsGrater( int[]  array_) {
 
-        ArrayList<Integer> listofOdds = new ArrayList<>();
-        ArrayList<Integer> listofEevens = new ArrayList<>();
+        boolean oddsAreGreater = false;
 
-        for (int i = 0; i < array_.length; i++) {
+        int[] oddValues = new int[array_.length];
+        int[] evenValues = new int[array_.length];
+        int oddValuesIndex = 0;
+        int evenValuesIndex = 0;
 
-            if (array_[i] % 2 == 0) {
-                listofEevens.add(array_[i]);
+        for (int index = 0; index < array_.length; index++) {
+            if ((array_[index] % 2) != 0) {
+
+                oddValues[oddValuesIndex] = array_[index];
+                oddValuesIndex++;
             } else {
-                listofOdds.add(array_[i]);
+                evenValues[evenValuesIndex] = array_[index];
+                evenValuesIndex++;
+            }
+
+
+        }
+
+        for(int oddIndex = 0; oddIndex < oddValuesIndex; oddIndex++){
+            for(int evenIndex = 0; evenIndex < evenValuesIndex; evenIndex++){
+                if(evenValues[evenIndex] != maxVlaue(array_)){
+                    if(oddValues[oddIndex] > evenValues[evenIndex]){
+                        oddsAreGreater = true;
+                    }
+                }
+
             }
 
         }
 
-        System.out.println("The odds are " + listofOdds.toString());
-        System.out.println("The evens are " + listofEevens.toString());
+        System.out.println("For the array "+Arrays.toString(array_) + "is every odd grater than the evens except the max ? "+oddsAreGreater);
+
+
+    }
+
+
+
+    public static boolean isOdd( int number){
+        boolean isOddNumber = false;
+        if (number % 2 != 0){
+            isOddNumber = true;
+        }else {
+            isOddNumber = false;
+        }
+
+        return isOddNumber;
+    }
+
+    public static boolean isEven( int number){
+        boolean isEvenNumber = false;
+        if (number % 2 == 0 ){
+            isEvenNumber = true;
+        }else {
+            isEvenNumber = false;
+        }
+        return  isEvenNumber;
+    }
+
+    public static int maxVlaue( int [] list){
+
+        int maxValue = 0;
+        for ( int i = 0 ; i < list.length ; i++){
+            if ( list[i] > maxValue)
+                maxValue = list[i];
+        }
+
+        return maxValue;
 
     }
 

@@ -1,23 +1,11 @@
+import java.util.Arrays;
+
 public class isInertial{
 	public static void main(String[] args){
-		int result = isInertial(new int[]{1});
+
+		int result = isInertial(new int[]{11, 4, 20, 9, 2, 8});
 		System.out.println(result);
-		result = isInertial(new int[]{2});
-		System.out.println(result);
-		result = isInertial(new int[]{1, 2, 3, 4});
-		System.out.println(result);
-		result = isInertial(new int[]{1, 1, 1, 1, 1, 1, 2});
-		System.out.println(result);
-		result = isInertial(new int[]{2, 12, 4, 6, 8, 11});
-		System.out.println(result);
-		result = isInertial(new int[]{2, 12, 12, 4, 6, 8, 11});
-		System.out.println(result);
-		result = isInertial(new int[]{-2, -4, -6, -8, -11});
-		System.out.println(result);
-		result = isInertial(new int[]{2, 3, 5, 7});
-		System.out.println(result);
-		result = isInertial(new int[]{2, 4, 6, 8, 10});
-		System.out.println(result);
+
 	}
 
 	static int isInertial(int[] a){
@@ -28,6 +16,7 @@ public class isInertial{
 		int[] evenValues = new int[a.length];
 		int oddValuesIndex = 0;
 		int evenValuesIndex = 0;
+
 		for(int index = 0; index < a.length; index++){
 			if((a[index] % 2) != 0){
 				containsOddValue = true;
@@ -37,12 +26,21 @@ public class isInertial{
 				evenValues[evenValuesIndex] = a[index];
 				evenValuesIndex++;
 			}
+
+			// find the maximum value
 			if(a[index] > maxValue){
 				maxValue = a[index];
 			}
 		}
+
+		// check inertial properties 1. has odd value , 2. max value is even and 3 . odds are grater except the max
+
+		// 1. has at least one odd
 		if(containsOddValue){
+
+			// 2. Max is even
 			if(maxValue % 2 == 0){
+
 				for(int oddIndex = 0; oddIndex < oddValuesIndex; oddIndex++){
 					for(int evenIndex = 0; evenIndex < evenValuesIndex; evenIndex++){
 						if(evenValues[evenIndex] != maxValue){
@@ -52,6 +50,7 @@ public class isInertial{
 								isInertial = 0;
 								break;
 							}
+
 						}else{
 							isInertial = 1;
 						}
@@ -62,6 +61,13 @@ public class isInertial{
 				}
 			}
 		}
+
+		System.out.println("Odd values : "+ Arrays.toString(oddValues));
+		System.out.println(" Even values : "+Arrays.toString(evenValues));
+
+		System.out.println(" Odd values index : "+oddValuesIndex);
+		System.out.println(" Even values index : "+evenValuesIndex);
+
 		return isInertial;
 	}
 }
