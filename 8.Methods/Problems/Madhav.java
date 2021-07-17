@@ -65,7 +65,6 @@ public class Madhav{
                 // already at the end of the array
                 break;
             }else{
-                startIndex = endIndex + 1;
                 endIndex = startIndex + n;
                 if((startIndex < arrayLength && endIndex < arrayLength)){
                     // operating inside the array bounderies
