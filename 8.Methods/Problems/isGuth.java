@@ -20,10 +20,10 @@ public class isGuth {
     // the method
     public static int isGuthSeq(int[] list){
 
-        int isGuthrieSequence = 0;         // flag
+        int isGuthrieSequence = 0;         // set a flag --> assume initially the seq is not guth
         int nextSequenceNumber = list[0];  // the first value of the Guth sequence
 
-        if(list[list.length - 1] == 1){    // the last element of the Guth seq has to be 1 , else the if body is skipped and the flag is 0
+        if(list[list.length - 1] == 1){    // the last element of the Guth seq has to be 1 , else the if body is skipped and the flag above is unchanged
 
             for(int index = 0; index < list.length; index++){
 
