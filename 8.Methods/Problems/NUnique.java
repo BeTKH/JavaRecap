@@ -35,6 +35,8 @@ public class NUnique {
 
         }
 
+
+        // return value check
         if ( sumsThatEqualN == 1){
             return 1;
         }else{
