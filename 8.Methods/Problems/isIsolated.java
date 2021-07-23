@@ -20,8 +20,6 @@ public class isIsolated {
         System.out.println(isIsolatedNum(63));
 
 
-
-
     }
 
 
