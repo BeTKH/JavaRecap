@@ -7,6 +7,7 @@ public class SequentiallyBounded {
         System.out.println(isSequentiallyBounded(new int[]{}));
         System.out.println(isSequentiallyBounded(new int[]{5, 5, 5, 5}));
         System.out.println(isSequentiallyBounded(new int[]{5, 5, 5, 2, 5}));
+        
         System.out.println();
         System.out.println(isSequentiallyBounded(new int[]{2, 3, 3, 99, 99, 99, 99, 99}));
         System.out.println(isSequentiallyBounded(new int[]{2, 3, 3, 3, 3}));
