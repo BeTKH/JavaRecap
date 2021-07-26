@@ -3,7 +3,7 @@ public class GetExponent {
     // main method
     public static void main(String[] args) {
 
-        
+
         System.out.println(getExponent(27, 3));
         System.out.println(getExponent(28, 3));
         System.out.println(getExponent(280, 7));
