@@ -22,18 +22,18 @@ public class HasNValues {
 
         int[] uniqueArray = new int[n];
         int totalAdded = 0;
-        boolean uniqueFlag;
+        boolean isUnique;
 
         for (int anA : a) {
-            uniqueFlag = false;
+            isUnique = false;
             for (int anUnique : uniqueArray) {
                 if (anA == anUnique) {
-                    uniqueFlag = true;
+                    isUnique = true;
                     break;
                 }
             }
 
-            if (!uniqueFlag) {
+            if (!isUnique) {
                 if (totalAdded >= n) return 0;
                 uniqueArray[totalAdded] = anA;
                 totalAdded++;
