@@ -8,6 +8,7 @@ public class EquvalentArrays {
         System.out.println(equivalentArrays(new int[] {2, 0, 1}, new int[] {0, 1, 2, 1}));
         System.out.println(equivalentArrays(new int[] {0, 5, 5, 5, 1, 2, 1}, new int[] {5, 2, 0, 1}));
         System.out.println(equivalentArrays(new int[] {5, 2, 0, 1}, new int[] {0, 5, 5, 5, 1, 2, 1}));
+        
         System.out.println(equivalentArrays(new int[] {0, 2, 1, 2}, new int[] {3, 1, 2, 0}));
         System.out.println(equivalentArrays(new int[] {3, 1, 2, 0}, new int[] {0, 2, 1, 0}));
         System.out.println( equivalentArrays(new int[] {1, 1, 1, 1, 1, 1}, new int[] {1, 1, 1, 1, 1, 2}));
