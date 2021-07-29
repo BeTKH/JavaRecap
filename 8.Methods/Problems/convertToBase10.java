@@ -23,8 +23,11 @@ public class convertToBase10 {
             int powerValue = 0;
             for (int i = list.length -1 ; i >= 0 ; i--){
 
-                base10Value += list[i] * Math.pow(base, powerValue ) ;   // example:  1 * (2 ^ 0) for the last digit in 1101
-                powerValue++;                                            // incremet the power
+                // example:  1 * (2 ^ 0) for the last digit in 1101
+                base10Value += list[i] * Math.pow(base, powerValue ) ;
+
+                // incremet the power
+                powerValue++;
 
             }
 
@@ -35,8 +38,6 @@ public class convertToBase10 {
 
 
     }
-
-
 
     // the isLegal method
     public static int isLegal( int[] list , int base){
