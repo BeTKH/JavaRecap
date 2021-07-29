@@ -13,7 +13,9 @@ public class arrayHasNoZero {
 
     public static int hasNoZero( int[] list){
 
-        int hasNoZ = 1; // set a flag to 1 -- assuming that there is no zero in the array
+        // set a flag to 1 -- assuming that there is no zero in the array
+
+        int hasNoZ = 1;
 
         for (int i = 0 ; i < list.length ; i++){
 
