@@ -12,6 +12,7 @@ public class isLegalNumber {
 
     }
 
+    
     // the isLegal method
     public static int isLegal( int[] list , int base){
 
