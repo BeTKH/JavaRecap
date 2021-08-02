@@ -8,7 +8,6 @@ public class computeDepth {
 
     }
 
-
     public static void depth( int n){
 
         int[] contributedList = new int[10];
