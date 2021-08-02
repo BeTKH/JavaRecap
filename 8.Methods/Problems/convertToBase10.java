@@ -36,12 +36,10 @@ public class convertToBase10 {
             return 0;
         }
 
-
     }
 
     // the isLegal method
     public static int isLegal( int[] list , int base){
-
 
         // set a flag -- assume the number is legal first
         int isLegal = 1;
