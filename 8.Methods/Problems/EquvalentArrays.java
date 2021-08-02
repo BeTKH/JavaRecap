@@ -32,9 +32,8 @@ public class EquvalentArrays {
         }
     }
 
-    
 
-
+    // a method that checks if a number is in the arry or not
     public static boolean notInArray( int number , int[] list){
 
         boolean isInNotArray = true;
