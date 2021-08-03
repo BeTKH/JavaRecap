@@ -1,4 +1,5 @@
 public class AreaQuadLateral {
+
     public static void main(String[] args) {
 
         // create a rectangle object
