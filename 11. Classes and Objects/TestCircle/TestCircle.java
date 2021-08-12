@@ -2,6 +2,7 @@ public class TestCircle {
 
     public static void main(String[] args) {
 
+
         // Create a circle with radius 1.0
         Circle circleWithRad1 = new Circle();
         System.out.println("The area of the Circle of radius is "+circleWithRad1.radius +" is "+circleWithRad1.getArea());
