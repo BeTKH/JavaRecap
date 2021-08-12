@@ -1,6 +1,7 @@
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
+
 public class SecToMinute {
     public static void main(String[] args) {
         // scanner object
