@@ -1,16 +1,16 @@
 public class TestCircle {
     public static void main(String[] args) {
 
-        // Create a circle with radius 1.0
+        // Create a circle-Object with radius 1.0
         Circle circleWithRad1 = new Circle();
         System.out.println("The area of the Circle of radius is "+circleWithRad1.radius +" is "+circleWithRad1.getArea());
 
 
-        // Create a circle with radius of 25
+        // Create a circle-Object with radius of 25
         Circle circleWithRad2 = new Circle(25);
         System.out.println("The area of the Circle of radius is "+circleWithRad2.radius +" is "+circleWithRad2.getArea());
 
-        // Create a circle with radius of 125
+        // Create a circle-Object with radius of 125
         Circle circleWithRad3 = new Circle(125);
         System.out.println("The area of the Circle of radius is "+circleWithRad3.radius +" is "+circleWithRad3.getArea());
     }
