@@ -2,10 +2,23 @@ public class InheritanceMain {
 
     public static void main(String[] args) {
 
-        Ferari ferariCar1 = new Ferari();
-        ferariCar1.color = "Red";
+        Car c = new Car();
+        c.carMthod();
 
-        System.out.println(ferariCar1.color);
+        System.out.println();
+
+        Ferari f = new Ferari();
+        f.ferariMethod();
+        f.carMthod();
+
+        System.out.println();
+
+        A a = new A();
+        a.displayA();
+
+        B b = new B();
+        b.displayB();
+        b.displayA();
 
     }
 }

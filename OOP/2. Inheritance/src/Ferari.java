@@ -1,8 +1,7 @@
 public class Ferari extends Car {
 
-    public String logo = "FerariLogo";
 
-    public void RocketBoost(){
-
+    public void ferariMethod(){
+        System.out.println("I am ferrai");
     }
 }
