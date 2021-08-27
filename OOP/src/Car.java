@@ -15,6 +15,11 @@ public class Car {
 
     // define a constructor that can initialize an object
 
+        /*
+        *  constructor has no return type, not even void
+        *  constructor name is same as class name
+        * */
+
     Car(String mod, String  col, int seats){
         model = mod ;
         color = col;
