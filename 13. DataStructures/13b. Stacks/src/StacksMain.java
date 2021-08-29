@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
@@ -29,6 +30,15 @@ public class StacksMain {
         System.out.println(bbqLine.peek());;
         System.out.println(bbqLine.toArray()[1]);
         System.out.println(bbqLine);
+
+        System.out.println();
+        // hash map ..
+        HashMap<String,String> hush = new HashMap<String, String>();
+
+        hush.put("abebe", "@bk_1663");
+        hush.put("gidy", "_1871Q@hvsh");
+
+        System.out.println(hush);
 
 
     }
