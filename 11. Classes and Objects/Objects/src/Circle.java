@@ -12,8 +12,16 @@ public class Circle {
         radius = newRadius;
     }
 
-    /* return area of the circle */
+    /* a method return area of the circle */
     protected double getArea(){
         return radius*radius*Math.PI;
+    }
+
+    public void setRadiusValue( double radii){
+        radius = radii;
+    }
+
+    public double getRadiusValue( ){
+        return radius;
     }
 }
