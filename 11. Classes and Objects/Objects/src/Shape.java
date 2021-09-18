@@ -4,6 +4,7 @@ public class Shape {
 
         Circle crcObj = new Circle();
         System.out.println(crcObj.radius);
+        
         System.out.println(crcObj.getArea());
 
 
@@ -17,6 +18,7 @@ public class Shape {
         // initializing value of a radius using a setter and getter methods
         Circle crcObj3 = new Circle();
         crcObj3.setRadiusValue(45.9);
+
         double radVal = crcObj3.getRadiusValue();
         System.out.println(radVal);
     }
