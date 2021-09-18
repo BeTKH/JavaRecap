@@ -11,5 +11,11 @@ public class TestFrame {
         frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame1.setVisible(true);
 
+        JFrame frame2 = new JFrame();
+        frame2.setTitle("Window 1");
+        frame2.setSize(200, 150);
+        frame2.setLocation(410, 100);
+        frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame2.setVisible(true);
     }
 }
