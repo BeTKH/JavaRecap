@@ -23,8 +23,6 @@
 * an ABSTRACT class can contain both ABSTRACT as well as regular methods and Variables!
 * an INTERFACE contains only ABSTRACT methods and VARIABLES!!!
 * */
-
-
 interface DogInterface{
 
     /*
@@ -57,6 +55,8 @@ class doggo implements DogInterface{
 abstract class abstractDog {
 
     String breed;
+
+    // REGULAR METHOD
     public void bark(){
         System.out.println("Bark!");
     }
